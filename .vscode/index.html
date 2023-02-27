@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+        text-align: center;
+    }
+    ul{ 
+        display: flex;
+        list-style-type: none; 
+        justify-content: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+    }  
+
+    li{
+        padding: 25px;
+
+    }
+    
+    /* li:hover{
+        background-color: black;
+        color: white;
+    } */
+
+    .menupricipal { 
+        padding: 20px;
+        margin: 40px;
+        background-position: center;
+        background-color: #F0B429;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        font-weight: normal;
+        color: #FFFFFF;
+        text-align: center;
+    } 
+    .menus {
+        padding: 20px;
+        margin: 40px;
+        background-position: center;
+        background-color: #005883;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        font-weight: normal;
+        color: #FFFFFF;
+        text-align: center;
+    }
+    .textoparrafo {
+            padding: 40px;
+            margin: 40px;
+            background-position: center;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #000000;
+            background-color: #B3B3B3;
+            text-align: start;
+            text-align: right;
+            line-height: 1.7;
+    }
+ 
+    .footer {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: small;
+        background-color: #333333;
+        font-weight: bold;
+        padding: 20px;
+        margin: 40px;
+        color: #FFFFFF;
+        align-items: center ;
+        right: 300;
+        left: 300;
+    }
+
+    #container{
+		margin: 0 auto;
+		padding: 10px;
+        list-style-type: none; 
+        justify-content: center;
+		 
+    } 
+
+	#container ul{
+        display: inline-block;
+        list-style-position: outside;
+        list-style-type: disc;
+	}
+
+	#container li{
+        padding: 5px;
+	}
+    
+</style>
+
+<body>
+    <div id="menus">
+        <ul>
+            <li>Inicio</li>
+            <li><a href="#boxmodel">Box Model</a></li>
+            <li><a href="#mockup">Mockup</a></li>
+            <li><a href="#footer">Acerca de</a></li>
+        </ul>
+    </div>
+    <h1 class="menupricipal"><strong>FASE 2 - COMPONENTE PRÁCTICO - PRÁCTICAS SIMULADAS</strong></h1>
+    <div class="menupricipal"> <strong>Tema elegido: Box Model - Estudiante Número 2</strong>
+
+    </div>
+
+    <h1 class="menus" id="boxmodel"><strong>BOX MODEL</strong></h1>
+    <div class="textoparrafo">
+        <a name="boxmodel" id="boxmodel"></a>
+        <p>En CSS, el término "modelo de caja" se usa cuando se habla de diseño y diseño.
+            El modelo de caja CSS es esencialmente una caja que envuelve cada elemento HTML. Consiste en: 
+            márgenes, bordes, relleno y el contenido real. La siguiente imagen ilustra el modelo de caja:
+            Al maquetar un documento, el motor de renderizado del navegador representa cada elemento como una caja rectangular, 
+            conforme al estándar del modelo de caja básico de CSS. CSS determina el tamaño, la posición y las propiedades (color, fondo, tamaño del borde, etc.) de estas cajas.
+            Cada caja está compuesta de cuatro partes (o áreas), definidas por sus respectivos límites: límite de contenido (content edge) , 
+            límite de relleno (padding edge) , límite de borde (border edge) y límite de margen (margin edge).</p>
+    </div>
+    <h3 class="menus" id="areasboxmodel"><strong>Areas Box Model</strong></h3>
+    <div class="textoparrafo">
+        <p>Inicias con la caja de contenido, que es la área en la que reside el contenido. Como aprendiste antes: este contenido puede 
+            controlar el tamaño de su elemento principal, por lo que suele ser el área de tamaño más variable.
+        </p>
+        <p>
+            La caja de padding (relleno) rodea la caja de contenido y es el espacio creado por la propiedad de padding.
+            Debido a que el padding está dentro de la caja, el fondo de la caja será visible en el espacio que crea. 
+            Si nuestra caja tiene reglas de desbordamiento establecidas, como overflow: auto o overflow: scroll, las barras 
+            de desplazamiento ocuparán este espacio también.
+        </p>
+        <p>
+            La caja de borde rodea la caja de padding y su espacio está ocupado por el valor del border. La caja de borde son los límites de su caja y el filo del borde 
+            es el límite de lo que puedes ver visualmente. La propiedad de border se usa para enmarcar visualmente un elemento.
+        </p>
+        <p>
+            El área final, la caja de margen, es el espacio alrededor de tu caja, definida por la regla de margin. 
+            Propiedades como el outline y box-shadow ocupan este espacio porque están pintadas por encima de los elementos, por lo que no afectan el tamaño de nuestra caja. 
+            Puedes tener un outline-width de 200px en nuestra caja y todo lo que está dentro e incluido la caja de borde sería exactamente del mismo tamaño.
+        </p>
+        <p>Cada elemento HTML es una caja que tiene 4 lados y se compone de cuatro áreas:</p>
+        <center><img src="imagenes/margen.png"width="700"height="450"></center>
+            <h3>Internos</h3>
+            <div id="container">
+            <ul >
+                <li>Content Box</li>
+                <li>Padding Box</li>
+                <li>Border Box</li>
+            </ul>
+        </div>
+        <h3>Externos</h3>
+        <div id="container">
+            <ul >
+                <li>Margin Box</li>
+            </ul>
+        </div>
+
+        <p>Estas áreas se apilan para formar el modelo de caja o box model. Cada elemento HTML es una caja que podemos controlar 
+            en el espacio exterior con la propiedad margin, después, podemos darle un borde y con la propiedad padding,
+            también podemos proporcionar los espacios interiores entre el contenido y el borde dentro de la caja.</p>
+    </div>
+
+    <h1 class="menus"><strong>Video sobre Box Model</strong></h1>
+    <iframe width="950" height="500" src="https://www.youtube.com/embed/1KkoCNojnNQ" 
+    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+    encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+    <h1 class="menus" id="mockup"><strong>MOCKUP</strong></h1>
+    <img src="imagenes/mockup.png"width="550"height="350" title="Imagen realizada en el software balsamiq">
+
+    <h1 class="menus" id="mockup"><strong>ACERCA DE</strong></h1>
+    <div class="textoparrafo">
+        <p>Informacion consultada en los siguientes sitio web: <a href="https://codigofacilito.com/articulos/que-es-el-box-model">Codigofacilito</a> y 
+        <a href="https://web.dev/learn/css/box-model/">Web.dev</a></p>
+    </div>
+
+</body>
+
+<footer class="footer" id="footer">
+        <p>Copyright 2023©</p>
+        <p>Para ver el aviso de privacidad, accede a fase2componentepractico.com/avisolegal</p>
+        <p class="MsoNormal">
+            <span style="font-size: 10.0pt; line-height: 107%">PBX: (+57) 604 344 37 00 Medellín, Colombia</span>
+        </p>
+        <p class="MsoNormal">
+            <span style="font-size: 10.0pt; line-height: 107%">Atención al usuario: atencionalusuario@fase2componentepractico.com<o:p></o:p></span>
+        </p>
+        <p>Fecha última actualización: 27 de Febreero de 2023</p>
+        <p>Mis datos de contacto son:<br>
+            Nombre: Luis Eduardo Escobar Diaz<br>
+            Programa: Ingeniería de Software<br>
+            Email: leescobar@unadvirtual.edu.co<br>
+            Skype: luisescobar03<br>
+            Telefono: 3145095589<br>
+            Grupo: 301404_7 <br>
+        </p>
+</footer>
+</html>
+    
